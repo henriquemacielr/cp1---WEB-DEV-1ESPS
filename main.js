@@ -5,11 +5,10 @@ function calcular() {
     let horaFim = parseInt(document.getElementById('horaFim').value);
     let minFim = parseInt(document.getElementById('minFim').value);
 
-    let inicioEmMinutos = (horaIni * 60) + minIni;
-    let fimEmMinutos = (horaFim * 60) + minFim;
+    let inicioMinutos = (horaIni * 60) + minIni;
+    let fimMinutos = (horaFim * 60) + minFim;
 
-    
-    let duracaoEmMinutos = fimEmMinutos - inicioEmMinutos;
+    let duracaoEmMinutos = fimMinutos - inicioMinutos;
 
     let horas = Math.floor(duracaoEmMinutos / 60);
     let minutos = duracaoEmMinutos % 60;
@@ -19,7 +18,6 @@ function calcular() {
     } else {
         document.getElementById('horas').innerText = horas;
     }
-    
     
     if (minutos < 10) {
         document.getElementById('minutos').innerText = "0" + minutos;
